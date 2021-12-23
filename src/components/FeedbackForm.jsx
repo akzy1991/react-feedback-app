@@ -31,6 +31,7 @@ const FeedbackForm = ({ handleAdd }) => {
         rating,
       };
       handleAdd(newFeedback);
+      setText('');
     }
   };
 
@@ -44,6 +45,7 @@ const FeedbackForm = ({ handleAdd }) => {
             onChange={handleTextChange}
             type='text'
             placeholder='Write a review'
+            value={text}
           />
           <Button type='submit' isDisabled={btnDisabled}>
             Send
